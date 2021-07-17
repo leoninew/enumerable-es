@@ -1,0 +1,12 @@
+# IDE
+.DS_Store
+.vs
+.vscode
+.idea
+
+# NODEJS
+/node_modules
+/coverage
+/dist
+
+*.log

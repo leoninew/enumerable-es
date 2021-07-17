@@ -1,0 +1,21 @@
+{
+  "name": "enumerable-es",
+  "version": "0.1.1",
+  "author": "leoninewang@outlook.com",
+  "main": "dist/cjs/src/index.js",
+  "module": "dist/es6/src/index.js",
+  "license": "MIT",
+  "scripts": {
+    "test": "jest",
+    "build:cjs": "tsc -P tsconfig.json",
+    "build:es6": "tsc -P tsconfig.json --module ES6 --outDir dist/es6",
+    "build:web": "browserify dist/cjs/src/index.js --standalone enumerable -o dist/web/bundle.js"
+  },
+  "devDependencies": {
+    "@types/jest": "^25.2.3",
+    "jest": "^26.0.1",
+    "ts-jest": "^26.0.0",
+    "ts-node": "^8.10.1",
+    "typescript": "^3.9.3"
+  }
+}
