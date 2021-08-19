@@ -1,8 +1,8 @@
 import Sequence from "./enumerable/Sequence";
-import { ISequence } from "./enumerable/ISequence";
+import {ISequence} from "./enumerable/ISequence";
 
-let innerRange = function* (start: number, count: number): Generator<number> {
-    for (let i = start; i < count; i++) {
+let rangeImpl = function* (start: number, count: number): Generator<number> {
+    for (let i = start; i < start + count; i++) {
         yield i;
     }
 };
@@ -16,7 +16,7 @@ let empty = function <T>(): ISequence<T> {
 }
 
 let range = function (start: number, count: number): ISequence<number> {
-    return from(innerRange(start, count));
+    return from(rangeImpl(start, count));
 }
 
 let repeat = function <T>(value: T, count: number): ISequence<T> {
