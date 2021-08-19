@@ -115,4 +115,4 @@ enumerable.from(document.querySelectorAll('a'))
 
 ## License
 
-[Apache License 2.0](https://github.com/leoninew/enumerable-es/blob/master/license.txt)
+[Apache-2.0](https://github.com/leoninew/enumerable-es/blob/master/license.txt)
