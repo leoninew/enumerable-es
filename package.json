@@ -1,10 +1,21 @@
 {
   "name": "enumerable-es",
-  "version": "0.1.1",
+  "version": "0.1.2",
+  "description": "enumerable-es is library operating data as C# LINQ style implemented by TypeScript",
+  "keywords": ["linq", "enumerable", "typescript"],
+  "homepage": "https://github.com/leoninew/enumerable-es",
+  "repository": {
+    "type" : "git",
+    "url": "https://github.com/leoninew/enumerable-es"
+  },
+  "bugs": {
+    "url": "https://github.com/leoninew/enumerable-es/issues",
+    "email": "leoninewang@outlook.com"
+  },
   "author": "leoninewang@outlook.com",
   "main": "dist/cjs/src/index.js",
   "module": "dist/es6/src/index.js",
-  "license": "MIT",
+  "license": "Apache License 2.0",
   "scripts": {
     "test": "jest",
     "build:cjs": "tsc -P tsconfig.json",
