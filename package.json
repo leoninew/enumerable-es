@@ -1,6 +1,6 @@
 {
   "name": "enumerable-es",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "enumerable-es is library operating data as C# LINQ style implemented by TypeScript",
   "keywords": ["linq", "enumerable", "typescript"],
   "homepage": "https://github.com/leoninew/enumerable-es",

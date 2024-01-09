@@ -1,4 +1,4 @@
-## Introducation
+## Introduction
 
 enumerable-es is library operating data as C# LINQ style implemented by TypeScript, [简体中文](https://github.com/leoninew/enumerable-es/blob/master/README_cn.md).
 

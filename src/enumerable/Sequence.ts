@@ -238,6 +238,28 @@ class Sequence<T> implements ISequence<T> {
         }
         return result;
     }
+
+    chunk(size: number): ISequence<T[]> {
+        let self = this;
+        let func = function* () {
+            let range: T[] = undefined;
+            for (const item of self._items) {
+                if(range === undefined) {
+                    range = [];
+                }
+                range.push(item);
+                if(range.length == size) {
+                    yield Array.from(range);
+                    range = undefined;
+                }
+            }
+            if(range !== undefined) {
+                yield range;
+            }
+        };
+        let items = func();
+        return new Sequence(items);
+    }
 }
 
 class Group<T, K> extends Sequence<T> implements IGroup<T, K> {

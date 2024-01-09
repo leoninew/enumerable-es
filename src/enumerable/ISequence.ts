@@ -43,6 +43,8 @@ export interface ISequence<T> extends Iterable<T> {
     toArray(): T[];
 
     first(): T | undefined;
+
+    chunk(size: number): ISequence<T[]>;
 }
 
 export interface IGroup<T, K> extends ISequence<T> {
