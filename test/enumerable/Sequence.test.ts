@@ -240,4 +240,13 @@ describe('enumerable', function () {
         let distinct = enumerable.from(hello).distinct(x => x.toUpperCase()).toArray();
         expect(distinct).toStrictEqual(['A', 'b', 'c', 'D']);
     });
+
+    test('chunk', () => {
+        let hello = 'hello'.split('');
+        let chunks = enumerable.from(hello).chunk(2).toArray();
+        expect(chunks.length).toBe(3);
+        expect(chunks[0]).toStrictEqual(['h', 'e']);
+        expect(chunks[1]).toStrictEqual(['l', 'l']);
+        expect(chunks[2]).toStrictEqual(['o']);
+    });
 });
